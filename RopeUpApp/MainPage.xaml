@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AwesomeApp.MainPage">
+
+
+    <StackLayout>
+        <Image Source="letter_r.jpg" HorizontalOptions="CenterAndExpand" Margin="50,25,50,15" ></Image>
+        <StackLayout Margin="20,0">
+            <Label Text="Username or Password is incorrect" TextColor="IndianRed" IsVisible="False" x:Name="invalid" HorizontalOptions="Center"/>
+            <Entry x:Name="user" Placeholder="Username"/>
+            <Entry x:Name="pass" Placeholder="Password" IsPassword="True" />
+        </StackLayout>
+        <StackLayout>
+             <!--Place new controls here--> 
+            <Button Text="Log in" Clicked="Login_Clicked" HorizontalOptions="Center"/>
+            <Button Text="Sign up" Clicked="SignUp_Clicked" HorizontalOptions="Center"/>
+
+        </StackLayout>
+    </StackLayout>
+
+
+</ContentPage>

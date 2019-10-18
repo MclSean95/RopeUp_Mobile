@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AwesomeApp.SignUp">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Sign up page!"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+                <Label Text="Please complete all entry fields" TextColor="IndianRed" IsVisible="False" x:Name="invalid"/>
+                <Entry x:Name="user" Placeholder="Username" />
+                <Label Text="(minimum 8 characters)" FontSize="Small"/>
+                <Entry x:Name="pass" Placeholder="Password" IsPassword="True" />
+                <Label Text="(minimum 8 characters must contain one(1) capital letter and one(1) special character)" FontSize="Small"/>
+                <Entry x:Name="passValid" Placeholder="Verify Password" IsPassword="True" />
+                <Entry x:Name="name" Placeholder="First Name" />
+                <Entry x:Name="email" Placeholder="Email" />
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="DOB"></Label>
+                    <DatePicker x:Name="dob" MinimumDate="01/01/1940"/>
+                </StackLayout>
+                <Button Text="Sign Up" Clicked="SignUp_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
